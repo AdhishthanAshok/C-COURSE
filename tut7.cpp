@@ -46,7 +46,7 @@ int main()
      weekdays m6 =  sat;
      weekdays m7 =  sunday;
 
-     for (int i = 0; i < 7; i++)
+     for (int i = 0; i < 7; i++)      
      {
         cout<<"The day number on "<< i <<" is: "<< weekdays (i)<<endl;
      }
