@@ -1,0 +1,15 @@
+.nav {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-left: 0px;
+  padding: 50px 0px 50px 0px;
+}
+
+#three-lines:active {
+  visibility: hidden;
+}
