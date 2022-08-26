@@ -60,12 +60,12 @@ int main()
         intersectionsize = size1;
     }
     int intersection[intersectionsize];
-    printf("Enter numbers for array 1\n");
+    printf("Enter numbers for SET 1\n");
     for (i = 0; i < size1; i++)
     {
         scanf("%d", &a[i]);
     }
-    printf("Enter numbers for array 2\n");
+    printf("Enter numbers for SET 2\n");
     for (i = 0; i < size2; i++)
     {
         scanf("%d", &b[i]);
@@ -86,7 +86,7 @@ int main()
    
     // PRINTING VALUES
     size = removerepeated(k, intersection);
-    printf("Array after intersection\n");
+    printf("SET after intersection\n");
     if (size > 0)
     {
         for (i = 0; i < size; i++)

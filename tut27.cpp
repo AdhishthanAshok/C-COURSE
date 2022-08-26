@@ -1,6 +1,6 @@
 
    /************************       MULTILEVEL INHERITANCE     ***********************/
- 
+ S
 #include<iostream>
 using namespace std;
 
@@ -30,6 +30,7 @@ int main(){
     int num;
      cout<<"Enter the marks you obtained in class 10th: "<<endl;
      cin>>num;
+    
     student.numbers(num);
     student.nature();
     return 0;
