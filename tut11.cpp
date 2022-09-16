@@ -38,6 +38,11 @@ int main(){
     int a;
     cout<<"enter the nth term: "<<endl;
     cin>>a;
-    cout<<"The value at nth term is "<<fib(a);
+    cout<<"The value's at nth term is "<<endl;
+    for (int i = 0; i < a; i++)
+    {
+        cout<<" , ";
+    }
+    
     return 0;
 }

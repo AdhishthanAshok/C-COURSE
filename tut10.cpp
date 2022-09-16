@@ -8,7 +8,9 @@ int moneyrecieved(int salary , float factor = 1.08)
 }
 
 int main(){
-    int money = 10000;
+    int money;
+    cout<<"Enter the money: "<<endl;
+    cin>>money;
     // cout<<"Enter the value of a: "<<endl;
     // cin>>a;
     // cout<<"Enter the value of b: "<<endl;
