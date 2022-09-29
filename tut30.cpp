@@ -20,7 +20,7 @@ class derieved : public base1 , public base2{
       void greet(){
      base1 :: greet();
      base2 :: greet();
-       cout<<"Chal bey"<<endl;
+       cout<<"kaise ho"<<endl;
       }
 };
 int main(){
