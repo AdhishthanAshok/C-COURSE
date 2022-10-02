@@ -5,6 +5,9 @@ class test{
    int a;
    int b;
    public:
+
+    // ****************** INITIALIZATION LIST ***************************
+
    test(int i , int j ) :a(i) , b(j){
     cout<<"Constructor is used here "<<endl;
     cout<<"The value of a is: "<<a<<endl;
@@ -12,6 +15,9 @@ class test{
    }
 };
 int main(){
-    test adi(4 , 6);
+    int m , n ;
+    cout<<"Enter the value of m and n : \n";
+    cin>>m>>n;
+    test adi(m ,n );
     return 0;
 }
