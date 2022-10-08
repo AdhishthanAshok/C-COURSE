@@ -2,6 +2,8 @@
 #include<cstring>
 using namespace std;
 
+/*  A CLASS WITH ONE PURE VIRTUAL FUNCTION IS CALLED ABSTRACT CLASS  */
+ 
 class CWH{
     protected:
     string title;
