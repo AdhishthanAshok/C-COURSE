@@ -5,9 +5,6 @@ void display(int a[],int n);
 void bubble_sort(int a[],int n);
 void selection_sort(int a[],int n);
 void insertion_sort(int a[],int n);
-
-//-----------------Main Function----------------------
-
 int main()
 {
    int n,choice,i;
@@ -21,10 +18,8 @@ int main()
         scanf("%d",&arr[i]);
    }
    printf("Please select any option Given Below for Sorting : \n");
-
 while(1)
    {
-
     printf("\n1. Bubble Sort\n2. Selection Sort\n3. Insertion Sort\n4. Display Array.\n5. Exit the Program.\n");
     printf("\nEnter your Choice : ");
     scanf("%d",&choice);
@@ -53,11 +48,6 @@ while(1)
 }
 return 0;
 }
-
-//-----------End of main function---------------------
-
-//-------------------Display Function-----------------
-
 void display(int arr[],int n)
 {
     for(int i=0;i<n;i++)
@@ -66,9 +56,6 @@ void display(int arr[],int n)
    }
 
 }
-
-//---------------------Bubble Sort Function-----------
-
 void bubble_sort(int arr[],int n)
 {
   int i,j,temp;
@@ -87,9 +74,6 @@ void bubble_sort(int arr[],int n)
 printf("After Bubble sort Elements are : ");
 display(arr,n);
 }
-
-//------------------Selection Sort Function---------
-
 void selection_sort(int arr[],int n)
 {
     int i,j,temp;
@@ -109,9 +93,6 @@ void selection_sort(int arr[],int n)
 printf("After Selection sort Elements are : ");
 display(arr,n);
 }
-
-//---------------Insertion Sort Function-------------------
-
 void insertion_sort(int arr[],int n)
 {
     int i,j,min;

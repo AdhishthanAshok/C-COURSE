@@ -7,14 +7,14 @@ void func(int a){
 
 }
 template <class T>
-void func(T a){
-    cout<<"This is templated data type function."<<a<<endl;
+void func(T b){
+    cout<<"This is templated data type function."<<b<<endl;
 }
 int main(){
      int a;     // HERE EXACT DATA TYPE FUNCTION WILL BE CALLED.
      float b;  // HERE TEMPLATED DATA TYPE FUNCTION WILL BE CALLED. 
     cout<<"Enter the value :"<<endl;
-cin>>a>>a;
+cin>>a>>b;
     func(a);    // HERE EXACT DATA TYPE FUNCTION WILL BE CALLED.
     func(b);    // HERE TEMPLATED DATA TYPE FUNCTION WILL BE CALLED. 
 
