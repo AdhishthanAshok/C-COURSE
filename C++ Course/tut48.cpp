@@ -22,7 +22,7 @@ int main(){
   cin>>x>>y;
   swapp(x , y);
   cout<<"After Swapping x and y:"<<endl;
-cout<<x<<endl<<y;
+  cout<<x<<endl<<y;
     return 0;
     getchar();
 }
