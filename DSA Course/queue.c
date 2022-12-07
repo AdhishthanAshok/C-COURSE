@@ -4,9 +4,9 @@
 struct queue
 {
     int size;
-    int f;
-    int r;
-    int * arr;
+    int f;   // front for pushing the elements. 
+    int r;   // rear  for popping the elements. 
+    int * arr;  
 };
 
 int isempty(struct queue *q){

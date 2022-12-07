@@ -33,12 +33,37 @@ struct node * transversal(struct node * ptr , struct node * p)
     }  
     
 }
+struct node* createnode(int data){
+    struct node * n;
+     n = (struct node*) malloc(sizeof(struct node));
+     n->data = data;
+     n->prev = NULL;
+     n->next = NULL;
+     return n;
+
+
+};
 
 int main(){
-struct node * head;
-struct node * n1;
-struct node * n2;
-struct node * last;
+struct node * head = (struct node*) malloc(sizeof(struct node));
+struct node * n1 = (struct node*) malloc(sizeof(struct node));
+struct node * n2 = (struct node*) malloc(sizeof(struct node));
+struct node * last = (struct node*) malloc(sizeof(struct node));
+
+         // The following representation will be give D-LL by creating a function which return the Node ........ 
+
+// struct node * head = createnode(4);
+// struct node * n1 = createnode(5);
+// struct node * n2 = createnode(6);
+// struct node * last = createnode(7);
+
+// head->next = n1;
+// n1 -> prev = head;
+// n1 -> next = n2;
+// n2 -> prev = n1;
+// n2 -> next = last;
+// last -> prev = n2;
+// last -> next = NULL;
 
  // memory allocation 
 
