@@ -146,9 +146,11 @@ printf("\nThe In order traveresal (Sorted Array Tree) of the Tree is : \n");
     // insert(p , 77);
     // insert(p , 1);
     // insert(p , 7);
-
+int element;
+printf("\nEnter the Element to be deleted: \n");
+scanf("%d" , &element);
     printf("\nAFTER DELETION :  \n");
-    Deletenode(p,9);
+    Deletenode(p, element);
         printf("\n");
     inorder(p);
 
