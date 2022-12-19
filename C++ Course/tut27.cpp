@@ -1,6 +1,5 @@
 
    /************************       MULTILEVEL INHERITANCE     ***********************/
- S
 #include<iostream>
 using namespace std;
 
