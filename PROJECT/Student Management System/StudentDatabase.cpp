@@ -102,7 +102,7 @@ void student :: menu() // Menu of the Program
     }
     default:
         system("cls");
-        cout << "\n\t\t\t\tInvalid Choice !!!!  Enter your Choice Again ......" << endl;
+        cout << "\n\n\n\t\t\t\tInvalid Choice !!!!  Enter your Choice Again ......" << endl;
         student ::menu();
     }
 }
@@ -116,32 +116,25 @@ void student :: insert() // Insertion of the Data
     cout << "\n\t\t\t\t|----------------------------------------|";
     cout << "\n\t\t\t\t|---------- INSERT NEW RECORD -----------|";
     cout << "\n\t\t\t\t|----------------------------------------|\n";
-    cout << "\n\n\t\t\t\t1 . Enter your name : " << endl;
-    cout << "\t\t\t\t";
+    cout << "\n\n\t\t\t\t1 . Enter your name : ";
     cin >> name;
-    cout << "\t\t\t\t Enter your Roll number : " << endl;
-    cout << "\t\t\t\t";
+    cout << "\n\n\t\t\t\t Enter your Roll number : ";
     cin >> roll_no;
-    cout << "\t\t\t\t Enter you Class : " << endl;
-    cout << "\t\t\t\t";
+    cout << "\n\n\t\t\t\t Enter you Class : ";
     cin >> standard;
-    cout << "\t\t\t\t Enter you Section : " << endl;
-    cout << "\t\t\t\t";
+    cout << "\n\n\t\t\t\t Enter you Section : ";
     cin >> section;
-    cout << "\t\t\t\t Enter your City : " << endl;
-    cout << "\t\t\t\t";
+    cout << "\n\n\t\t\t\t Enter your City : ";
     cin >> adress;
-    cout << "\t\t\t\t Enter your Phone Number : " << endl;
-    cout << "\t\t\t\t";
+    cout << "\n\n\t\t\t\t Enter your Phone Number : ";
     cin >> Phone_number;
-    cout << "\t\t\t\t Enter your Email : " << endl;
-    cout << "\t\t\t\t";
+    cout << "\n\n\t\t\t\t Enter your Email : ";
     cin >> email;
 
     file.open("Database.txt", ios ::app | ios ::out);
     file << name << " " << roll_no << " " << standard << " " << section << " " << adress << " " << Phone_number << " " << email << "\n";
     file.close();
-    cout << "\n\t\t\t\t----Data inserted successfuly---------- " << endl;
+    cout << "\n\n\t\t\t\t----Data inserted successfuly---------- " << endl;
 }
 
 void student :: display() // Displaying the Data
