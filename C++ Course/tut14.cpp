@@ -18,7 +18,6 @@ void binary ::entering()
 {
     cout << "Enter a number: " << endl;
     cin >> s;
-    
 }
 
 void binary ::checking()
@@ -27,7 +26,7 @@ void binary ::checking()
     {
         if (s.at(i) != '0' && s.at(i) != '1')
         {
-            cout << "Numer is not Binary.";
+            cout << "Number is not Binary.";
             exit(0);
         }
     }
@@ -35,7 +34,7 @@ void binary ::checking()
 }
 
 void binary ::converting()
-{   cout<<"THe number after converting is: "<<endl;
+{   cout<<"The number after converting into 1's compliment is: "<<endl;
     for (int i = 0; i < s.length(); i++)
     {
         if (s.at(i) == '0')
@@ -45,7 +44,7 @@ void binary ::converting()
         else
             cout << '0';
     }
-    cout<<endl;
+    cout<<endl; 
 }
 
 void binary ::displaying()
@@ -64,7 +63,7 @@ int main()
     b.entering();
     b.checking();
     b.displaying();
-    b.converting();
+    b.converting();                         
     b.displaying();
     return 0;
 }

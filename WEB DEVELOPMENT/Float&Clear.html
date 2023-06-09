@@ -1,41 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allignment</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
-        .container{
+
+        .container {
+            background-color: bisque;
             width: 800px;
-            border: 4px solid #cf4141;
+            border: 4px solid #0701a1;
             padding: 30px;
             margin: 30px auto;
         }
 
-        .item{
-            padding-right: 30px;
+        .item {
+            border: 2px solid #f30303;
+            margin: 30px auto;
+            padding-right: 40px;
             background-color: aquamarine;
         }
+
+        #fruit {
+            float: left;
+            width: 370px;
+        }
+
+        #computer {
+            float: right;
+            width: 359px;
+        }
+
+        #stationary {
+            /* float: left; */
+            clear: both;
+            width: 359px;
+
+        }
+        #heading{
+          font-family: 'Times New Roman', Times, serif;
+          width: 350px;
+          padding-left: 40px;
+        }
+
     </style>
 </head>
+
 <body>
     <div class="container">
+        <h1 id="heading">WELCOME TO MY STORE</h1>
         <div id="fruit" class="item">
-             <h3>Fruit</h3>
-                <p id="fruitpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias suscipit qui et veniam? Dolor enim ipsa sed modi? Delectus!</p>
-            </div>
-            <div id="computer" class="item">
+            <h3>Fruit</h3>
+            <p id="fruitpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor,
+                sit amet consectetur adipisicing elit. Delectus non ullam nulla pariatur illo eligendi temporibus
+                assumenda blanditiis! Tempora aut animi eaque blanditiis officia sequi deserunt, veritatis rerum
+                consequuntur explicabo fugit totam, eos magni nihil mollitia placeat cum autem, odit deleniti delectus
+                officiis doloremque. Sed deleniti error dolor quibusdam reiciendis. Ad molestias suscipit qui et veniam?
+                Dolor enim ipsa sed modi? Delectus!</p>
+        </div>
+        <div id="computer" class="item">
             <h3>Computer</h3>
-            <p id="computerpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias suscipit qui et veniam? Dolor enim ipsa sed modi? Delectus!</p>
+            <p id="computerpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, autem illum voluptate, voluptatum minus
+                ipsam tempora possimus, voluptas incidunt commodi dolores aliquam architecto nesciunt. Repellendus
+                consequuntur qui sit ipsam, architecto deleniti possimus? Explicabo neque molestiae laudantium iusto,
+                dolore illo possimus nam quibusdam, cum, quia dignissimos laborum et soluta eos. Odio? suscipit qui et
+                veniam? Dolor enim ipsa sed modi? Delectus!</p>
         </div>
         <div id="stationary" class="item">
             <h3>Stationary</h3>
-            <p id="stationarypara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias suscipit qui et veniam? Dolor enim ipsa sed modi? Delectus!</p>    
+            <p id="stationarypara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ad odit corrupti expedita iste sit
+                doloremque sint illum minus praesentium cupiditate quisquam fugit ea, officiis ex maxime magni eius quod
+                veniam? Consectetur animi porro molestiae? Repellat accusamus dolorem deleniti sapiente eveniet, placeat
+                cumque laboriosam, voluptas voluptates repellendus, aperiam commodi illum. suscipit qui et veniam? Dolor
+                enim ipsa sed modi? Delectus!</p>
         </div>
     </div>
 </body>
+
 </html>

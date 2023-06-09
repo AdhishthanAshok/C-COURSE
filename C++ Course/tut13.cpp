@@ -17,7 +17,6 @@ class animal
         cout<<"The characterstic sound of the animal is: "<<sound<<endl;
         cout<<"The characterstic name of the animal is: "<<name<<endl;
         cout<<"The characterstic breed of the animal is: "<<breed<<endl;
-
     }
 };
 
@@ -26,7 +25,6 @@ void animal :: setdata(int name1 , int breed2)
     name1 = name;
     breed2 = breed;
 };
-
 
 int main(){
     animal dog;

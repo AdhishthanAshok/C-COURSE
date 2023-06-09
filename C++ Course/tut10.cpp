@@ -2,7 +2,7 @@
 using namespace std;
 
 
-int moneyrecieved(int salary , float factor = 1.08)
+float moneyrecieved(int salary , float factor = 1.08)
 {
     return salary*factor;
 }

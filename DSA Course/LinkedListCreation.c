@@ -6,7 +6,7 @@ int data;
  struct node* next;
 };
 
-int linkedlistTraversal(struct node * ptr)
+void linkedlistTraversal(struct node * ptr)
 { 
     while (ptr != NULL)
     {   for (int i = 1; i < 5; i++)
@@ -25,10 +25,10 @@ struct node * fourth;
 
  // Alloating memony in heap for each node
 
-head  = (struct node * ) malloc(sizeof(struct node * ));
-second  = (struct node * ) malloc(sizeof(struct node * ));
-third = (struct node * ) malloc(sizeof(struct node * ));
-fourth = (struct node * ) malloc(sizeof(struct node * ));
+head  = (struct node *) malloc(sizeof(struct node * ));
+second  = (struct node *) malloc(sizeof(struct node * ));
+third = (struct node *) malloc(sizeof(struct node * ));
+fourth = (struct node *) malloc(sizeof(struct node * ));
 
 // joining head and second nodes.
 

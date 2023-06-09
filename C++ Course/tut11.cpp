@@ -33,16 +33,15 @@ int fib(int n)
     }
     return fib(n-2) + fib(n-1);
 }
-
 int main(){
     int a;
     cout<<"enter the nth term: "<<endl;
-    cin>>a;
+    cin>>a; 
     cout<<"The value's at nth term is "<<endl;
-    for (int i = 0; i < a; i++)
+    for (int i = 1; i <= a-1; i++)
     {
-        cout<<" , ";
+        cout<<fib(i)<<" , ";
     }
-    
+        cout<<fib(a)<<" . ";
     return 0;
 }

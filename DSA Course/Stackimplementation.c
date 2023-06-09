@@ -27,6 +27,7 @@ int isfull(struct stack *ptr){
     }
 }
 
+
 int main(){
 
 struct stack *s;

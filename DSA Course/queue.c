@@ -48,16 +48,16 @@ int dequeue(struct queue *q ){
 
 int main(){
 struct queue q;
-q.size = 10;
+q.size = 4;
 q.f = q.r = -1;
 q.arr = (int *)malloc(q.size * sizeof(int));
 
-enqueue(&q , 1);
-enqueue(&q , 2);
+enqueue(&q , 7);
+enqueue(&q , 9);
 enqueue(&q , 3);
 enqueue(&q ,4);
-printf("Removing element %d \n" ,dequeue(&q));
-printf("Removing element %d \n" ,dequeue(&q));
+// printf("Removing element %d \n" ,dequeue(&q));
+// printf("Removing element %d \n" ,dequeue(&q));
 
 
 if (isempty(&q))
