@@ -78,7 +78,7 @@ void checkpassword(string& password)
 void registration(){
     system("cls");
     cout<<"\n\t\t\t                  |--------------------------------------------------------------------|"<<endl;
-    cout<<"\t\t\t                  |     ******************      Create your account  ***************** |"<<endl;
+    cout<<"\t\t\t                  |***********************      Create your account  ***************** |"<<endl;
     cout<<"\t\t\t                  |--------------------------------------------------------------------|"<<endl;
     string username , password;
     cout<<"\n\t\t\tEnter the username : ";
@@ -92,7 +92,7 @@ void registration(){
     system("PAUSE\n");
     main();
 }
-
+            
 
 void login(){
     int exist;
