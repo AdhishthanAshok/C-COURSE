@@ -17,8 +17,8 @@ int main(){
     mylist.push_front(5);      // Push element in the front side of the list 
     mylist.push_back(15);      // Push element in the back side of the list 
     
-    mylist.pop_front();      // Push element in the front side of the list 
-    mylist.pop_back();      // Push element in the back side of the list 
+    mylist.pop_front();      // Pop element in the front side of the list 
+    mylist.pop_back();      // Pop element in the back side of the list 
     
     cout<< "\n                List should be : 5  10  10  10  15 \nList after pushing and popping : " ;
     for(int value : mylist){

@@ -93,7 +93,7 @@ int main()
     struct node *third;
     struct node *fourth;
     int data;
-    // int index;
+    int index;
 
     head = (struct node *)malloc(sizeof(struct node *));
     second = (struct node *)malloc(sizeof(struct node *));
@@ -119,12 +119,12 @@ int main()
     fourth->next = NULL;
 
     linkedlistTraversal(head);
-
+    
     printf("\n");
-    // printf("Enter the index you want to store the element: \n");
-    // scanf("%d" , &index);
-    printf("Enter the element you want to store in the List : \n");
-    scanf("%d", &data);
+    printf("Enter the index you want to store the element: \n");
+    scanf("%d" , &index);
+    // printf("Enter the element you want to store in the List : \n");
+    // scanf("%d", &data);
 
     // inserting new element at first .
 
@@ -132,7 +132,7 @@ int main()
 
      // inserting new element at index .
 
-    // head = insertatIndex(head, data , index);
+    head = insertatIndex(head, data , index);
 
      // inserting new element at the end .
 
@@ -140,7 +140,7 @@ int main()
     
     // inserting new element after a given node.
 
-     head = insertafternode(head, head , data);
+    //  head = insertafternode(head, head , data);
     printf("\n");
 
     printf("After insertion at index : \n");

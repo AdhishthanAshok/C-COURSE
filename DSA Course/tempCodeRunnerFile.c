@@ -1,2 +1,2 @@
-tf("\nThe Post order traveresal of the Tree is : \n");
-        postorder(p)
+t to store in the List : \n");
+    // scanf("%d", &data);

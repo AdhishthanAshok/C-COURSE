@@ -1,12 +1,13 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
-    "files.associations": {
-        "queue": "c",
-        "array": "c",
-        "string_view": "c",
-        "initializer_list": "c",
-        "utility": "c",
-        "iostream": "cpp",
-        "typeinfo": "cpp"
-    }
+  "C_Cpp.errorSquiggles": "Disabled",
+  "files.associations": {
+    "queue": "c",
+    "array": "c",
+    "string_view": "c",
+    "initializer_list": "c",
+    "utility": "c",
+    "iostream": "cpp",
+    "typeinfo": "cpp",
+    "ostream": "cpp"
+  }
 }
