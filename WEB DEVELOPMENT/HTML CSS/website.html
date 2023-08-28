@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro</title>
+
+    <style>
+      button,
+      p {
+        font-family: Roboto;
+      }
+      .button1 {
+        color: white;
+        background-color: rgb(141, 2, 2);
+        height: 36px;
+        width: 105px;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: opacity 0.16s;
+      }
+      .button1:hover {
+        opacity: 0.8;
+      }
+      .button1:active {
+        opacity: 0.3;
+      }
+
+      .button2 {
+        color: rgb(0, 0, 255);
+        margin-left: 10px;
+        background-color: rgb(255, 255, 255);
+        height: 36px;
+        width: 105px;
+        font-size: 17px;
+        border: 1px solid blue;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: background-color 0.15s;
+      }
+      .button2:hover {
+        background-color: rgb(46, 46, 194);
+        color: white;
+      }
+
+      .Tweet {
+        background-color: blue;
+        border: none;
+        margin-left: 10px;
+        border-radius: 25px;
+        color: white;
+        font-weight: bold;
+        vertical-align: top;
+        padding: 8px 16px 8px 16px;
+        cursor: pointer;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .tweet:active {
+        margin-top: 3px;
+        margin-left: 3px;
+        box-shadow: none;
+      }
+      .price {
+        font-size: large;
+        color: green;
+        font-weight: bold;
+      }
+      .addto {
+        color: black;
+        font-size: large;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(254, 217, 10);
+        padding: 8px 40px 8px 40px;
+        transition: box-shadow 0.2s, background-color 0.15s, padding 0.15s;
+      }
+      .addto:hover {
+        background-color: rgb(229, 205, 72);
+        cursor: pointer;
+        box-shadow: 10px 7px 20px rgba(0, 0, 0, 0.8);
+        padding: 8px 60px 8px 60px;
+      }
+      .addto:active {
+        background-color: rgb(106, 120, 0);
+      }
+
+      .buy {
+        margin-left: 15px;
+        color: black;
+        transition: box-shadow 0.2s;
+        font-size: large;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(235, 137, 0);
+        padding: 8px 40px 8px 40px;
+        transition: background-color 0.15s, padding 0.15s;
+      }
+      .buy:hover {
+        background-color: rgb(254, 182, 82);
+        cursor: pointer;
+        box-shadow: 10px 7px 20px rgba(0, 0, 0, 0.8);
+        padding: 8px 60px 8px 60px;
+      }
+      .buy:active {
+        background-color: rgb(161, 73, 0);
+      }
+      .shadow-button {
+        background-color: green;
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        cursor: pointer;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      }
+      .shadow-button:active {
+        margin-top: 2px;
+        margin-left: 2px;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button1">Subscribe</button>
+    <button class="button2">Join</button>
+    <button class="Tweet">Tweet</button>
+
+    <p><a href="https://www.amazon.in">Go To Amazon</a></p>
+    <h2 style="font-weight: bold">Nice Running Black Shoes</h2>
+    <br />
+    <p class="price">$39 - in stock</p>
+    <p>Free Delievery Tommorow</p>
+    <br />
+    <button class="addto">Add To Cart</button>
+    <button class="buy">Buy Now</button>
+    <br /><br />
+    <button class="shadow-button">3d-Click</button>
+  </body>
+</html>
