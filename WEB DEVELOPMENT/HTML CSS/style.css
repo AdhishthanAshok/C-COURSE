@@ -1,15 +1,19 @@
-.nav {
+.thumbnail {
+  width: 300px;
+  display: block;
+}
+
+.search-bar {
+  display: block;
+}
+
+.video-title {
+  width: 300px;
+}
+
+.video-preview {
+  width: 300px;
   display: inline-block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin-left: 0px;
-  padding: 50px 0px 50px 0px;
-}
-
-#three-lines:active {
-  visibility: hidden;
+  vertical-align: top;
+  margin-right: 15px;
 }
