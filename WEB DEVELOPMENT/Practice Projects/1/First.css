@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+div {
+  margin: 0;
+}
+
+.Discription {
+  font-size: large;
+  width: 400px;
+  transition: width 0.25s, font-size 0.25s;
+}
+
+.Discription:hover {
+  font-size: x-large;
+  width: 450px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  left: 65%;
+  margin-left: 0px;
+  padding: 15px 0px 15px 0px;
+}
+
+.items {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.nav-item {
+  list-style-type: none;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 30px 15px 30px;
+  display: inline;
+  transition: background-color 0.25s, font-size 0.25s;
+}
+
+.nav-item:hover {
+  background-color: rgba(46, 67, 164, 0.3);
+  font-size: x-large;
+}
+
+.first {
+  background-image: url("./Images/1.jpg");
+  height: 750px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+}
+.navbar {
+  opacity: 0.3;
+  transition: opacity 0.25s;
+}
+.navbar:hover {
+  opacity: 1;
+}
+.first-content {
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 400px;
+}
+h3 {
+  font-size: xx-large;
+  margin: 10px 0 10px 0;
+  transition: font-size 0.25s;
+}
+h3:hover {
+  font-size: xxx-large;
+}
+
+.button1 {
+  border: none;
+  width: 150px;
+  height: 40px;
+  color: rgb(0, 255, 255);
+  background-color: rgb(46, 67, 164);
+  padding: 7px 7px 7px 7px;
+  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.25s;
+}
+.button1:hover {
+  cursor: pointer;
+  height: 60px;
+  opacity: 0.4;
+  font-size: large;
+  width: 180px;
+}
+.button1:active {
+  color: rgb(46, 67, 164);
+  background-color: rgb(0, 255, 255);
+}
+
+.second {
+  background-image: url("./Images/2.jpg");
+  height: 750px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.second-content {
+  color: black;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  width: 400px;
+}
+
+.button2 {
+  border: none;
+  width: 150px;
+  height: 40px;
+  color: rgb(255, 227, 187);
+  background-color: rgb(213, 70, 0);
+  padding: 7px 7px 7px 7px;
+  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.25s;
+}
+.button2:hover {
+  cursor: pointer;
+  height: 60px;
+  font-size: large;
+  opacity: 0.4;
+  width: 180px;
+}
+.button2:active {
+  color: rgb(213, 70, 0);
+  background-color: rgb(255, 227, 187);
+}
+
+.third {
+  background-image: url("./Images/3.jpg");
+  height: 750px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.third-content {
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 400px;
+}
+
+.button3 {
+  border: none;
+  width: 150px;
+  height: 40px;
+  color: rgba(150, 195, 200, 255);
+  background-color: rgb(0, 0, 0);
+  padding: 7px 7px 7px 7px;
+  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.25s;
+}
+.button3:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color: rgba(150, 195, 200, 255);
+  height: 60px;
+  font-size: large;
+  opacity: 0.4;
+  width: 180px;
+}
+.button3:active {
+  color: rgba(150, 195, 200, 255);
+  background-color: rgb(0, 0, 0);
+}
