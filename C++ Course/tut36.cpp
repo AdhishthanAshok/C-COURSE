@@ -30,7 +30,7 @@ int main(){
     a.setdata(5);
     a.getdata();
 
-    //***************** Because of line 18 declaration we can use setdata and getdata in one go....
+    //***************** Bs m ecause of line 18 declaration we can use setdata and getdata in one go....
     //*****************        because setdata is acting like a variable here  ********************
 
     a.setdata1(7).getdata1();
