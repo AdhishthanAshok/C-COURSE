@@ -127,7 +127,8 @@ h3:hover {
   color: rgb(0, 255, 255);
   background-color: rgb(46, 67, 164);
   padding: 7px 7px 7px 7px;
-  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.25s;
+  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.4s,
+    transform 0.25s;
 }
 .button1:hover {
   cursor: pointer;
@@ -139,6 +140,7 @@ h3:hover {
 .button1:active {
   color: rgb(46, 67, 164);
   background-color: rgb(0, 255, 255);
+  transform: scale(0.9);
 }
 
 .button2 {
@@ -148,7 +150,8 @@ h3:hover {
   color: rgb(255, 227, 187);
   background-color: rgb(213, 70, 0);
   padding: 7px 7px 7px 7px;
-  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.25s;
+  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.4s,
+    transform 0.25s;
 }
 .button2:hover {
   cursor: pointer;
@@ -160,6 +163,7 @@ h3:hover {
 .button2:active {
   color: rgb(213, 70, 0);
   background-color: rgb(255, 227, 187);
+  transform: scale(0.9);
 }
 
 .button3 {
@@ -169,7 +173,8 @@ h3:hover {
   color: rgba(150, 195, 200, 255);
   background-color: rgb(0, 0, 0);
   padding: 7px 7px 7px 7px;
-  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.25s;
+  transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.25s,
+    transform 0.4s;
 }
 .button3:hover {
   cursor: pointer;
@@ -183,4 +188,5 @@ h3:hover {
 .button3:active {
   color: rgba(150, 195, 200, 255);
   background-color: rgb(0, 0, 0);
+  transform: scale(0.9);
 }
