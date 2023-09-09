@@ -52,22 +52,32 @@ a {
   object-fit: cover;
   background-color: #00003a;
 }
-.first {
-  background-image: url("./Images/1.jpg");
-  height: 750px;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0;
+.video-play {
+  position: relative;
+  margin-top: -150px;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
-
+@media (min-aspect-ratio: 16/9) {
+  .video-play {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-play {
+    width: auto;
+    height: 100%;
+  }
+}
 .first-content {
   color: white;
   width: 400px;
   position: absolute;
   top: 30%;
   left: 13%;
+  z-index: 2;
 }
 
 .second {
@@ -125,7 +135,7 @@ h3:hover {
   width: 150px;
   height: 40px;
   color: rgb(0, 255, 255);
-  background-color: rgb(46, 67, 164);
+  background-color: rgb(127, 65, 34);
   padding: 7px 7px 7px 7px;
   transition: width 0.25s, height 0.25s, opacity 0.25s, font-size 0.4s,
     transform 0.25s;
