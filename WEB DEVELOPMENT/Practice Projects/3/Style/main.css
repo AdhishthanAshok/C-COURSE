@@ -1,0 +1,152 @@
+.first {
+  position: relative;
+  background-color: rgba(239, 240, 255, 255);
+  width: 100%;
+  margin-top: 80px;
+  height: 90vh;
+}
+.first-content {
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  width: 550px;
+  height: 310px;
+}
+strong {
+  font-size: 51.2px;
+  color: rgb(43, 28, 80);
+  font-size: 400;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 56.3167px;
+}
+#first-content-p {
+  color: rgb(61, 46, 124);
+  width: 550px;
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 25px;
+}
+#first-btn {
+  border: none;
+  margin: 40px 0 0 0;
+  font-size: x-large;
+  padding: 24px 80px 24px 80px;
+  border-radius: 40px;
+  color: white;
+  background-color: rgb(86, 90, 221);
+}
+
+.first-image-bg {
+  position: relative;
+  top: 15%;
+  left: 50%;
+  width: 600px;
+  height: 460px;
+  border-radius: 25px;
+  background-color: rgba(159, 146, 236, 255);
+}
+
+.first-image {
+  position: absolute;
+  width: 468px;
+  top: 11%;
+  left: 11%;
+  border-radius: 30px;
+}
+
+.second-1 {
+  position: relative;
+  top: 12%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+#heading {
+  color: rgb(35, 35, 35);
+  font-size: 80px;
+  margin-left: 40%;
+  margin-bottom: 35px;
+}
+.feature-box {
+  display: flex;
+  justify-content: center;
+}
+.features {
+  width: 298px;
+  position: relative;
+  margin-right: 30px;
+}
+.img-head {
+  width: 250px;
+  margin-bottom: 15px;
+}
+.feature-heading {
+  position: absolute;
+  padding-left: 15px;
+  top: 20px;
+  font-size: 25px;
+  display: inline-block;
+}
+.feature-content {
+  margin-top: 25px;
+  color: rgb(119, 119, 119);
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.third {
+  position: relative;
+  top: 20%;
+  margin-top: 90px;
+}
+.third-content {
+  position: relative;
+  top: 20%;
+  left: 60%;
+  width: 550px;
+  height: 260px;
+}
+strong {
+  font-size: 51.2px;
+  color: rgb(43, 28, 80);
+  font-size: 400;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 56.3167px;
+}
+#third-content-p {
+  padding-left: 80px;
+  color: rgb(61, 46, 124);
+  width: 550px;
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.third-image {
+  position: absolute;
+  width: 628px;
+  height: 418px;
+  top: 0%;
+  left: 11%;
+  border-radius: 30px;
+}
+#poductivity-content {
+  position: absolute;
+  top: 20px;
+  font-size: 25px;
+  font-weight: 400;
+  display: inline-block;
+}
+b {
+  width: 200px;
+}
+.third-content-logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+}
+.third-logo-head {
+  display: grid;
+  grid-template-columns: 80px 100px;
+}
