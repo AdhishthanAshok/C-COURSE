@@ -1,13 +1,13 @@
 var number = 5;
-console.log(number + 10);
+console.log(number + 10); // output -> 15
 console.log("Im a *Double quoted string *.");
-console.log("Im a", number, "star rated rated Chief");
+console.log("Im a", number, "star rated rated Chief"); // output -> Im a , 15 , star rated rated Chief
 var mystr1 = "Hello";
 var mystr2 = "Hi";
 var mystr3 = "Hey";
 console.log(mystr1, " ", mystr2, " ", mystr3);
 
-var firstname = `Hii \\`; // double Backlash will give single backslah as a output
+var firstname = `Hii \\`; // double Backlash will give single backslash as a output
 console.log(firstname);
 
 var first = "First line ";
