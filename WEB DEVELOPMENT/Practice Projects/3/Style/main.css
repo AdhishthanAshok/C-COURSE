@@ -12,14 +12,6 @@
   width: 550px;
   height: 310px;
 }
-strong {
-  font-size: 51.2px;
-  color: rgb(43, 28, 80);
-  font-size: 400;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 56.3167px;
-}
 #first-content-p {
   color: rgb(61, 46, 124);
   width: 550px;
@@ -99,25 +91,20 @@ strong {
   position: relative;
   top: 20%;
   margin-top: 90px;
+  height: 450px;
 }
+
 .third-content {
   position: relative;
+  padding-top: 40px;
   top: 20%;
   left: 60%;
   width: 550px;
   height: 260px;
 }
-strong {
-  font-size: 51.2px;
-  color: rgb(43, 28, 80);
-  font-size: 400;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 56.3167px;
-}
 #third-content-p {
   padding-left: 80px;
-  color: rgb(61, 46, 124);
+  color: rgb(35, 35, 35);
   width: 550px;
   font-weight: 400;
   margin-top: 20px;
@@ -131,16 +118,11 @@ strong {
   left: 11%;
   border-radius: 30px;
 }
-#poductivity-content {
-  position: absolute;
-  top: 20px;
-  font-size: 25px;
-  font-weight: 400;
-  display: inline-block;
+p#productivity-content {
+  font-weight: 900;
+  width: 350px;
 }
-b {
-  width: 200px;
-}
+
 .third-content-logo {
   width: 50px;
   height: 50px;
@@ -149,4 +131,120 @@ b {
 .third-logo-head {
   display: grid;
   grid-template-columns: 80px 100px;
+}
+
+.fourth {
+  position: relative;
+  top: 20%;
+  margin-top: 90px;
+  height: 450px;
+}
+.fourth-content {
+  position: relative;
+  padding-top: 40px;
+  top: 20%;
+  left: 10%;
+  width: 550px;
+  height: 260px;
+}
+strong {
+  font-size: 51.2px;
+  color: rgb(35, 35, 35);
+  font-size: 400;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 56.3167px;
+}
+#fourth-content-p {
+  padding-left: 80px;
+  color: rgb(61, 46, 124);
+  width: 550px;
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 25px;
+}
+p#optimize-heading {
+  font-weight: 900;
+  width: 350px;
+}
+
+.fourth-content-logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+}
+.fourth-logo-head {
+  display: grid;
+  grid-template-columns: 80px 100px;
+}
+
+.fourth-image {
+  position: absolute;
+  width: 628px;
+  height: 418px;
+  top: 11%;
+  left: 50%;
+  border-radius: 30px;
+}
+
+.fifth {
+  background-color: rgb(239, 240, 255);
+  position: relative;
+  top: 25%;
+  margin-top: 70px;
+  height: 884px;
+}
+.fifth-heading {
+  padding-top: 50px;
+  position: absolute;
+  left: 22%;
+  font-size: 78px;
+  color: rgb(27, 34, 75);
+  font-weight: 600;
+}
+
+.fifth-1 {
+  width: 518px;
+  height: 572px;
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  border: 1px solid red;
+  background-color: rgb(209, 209, 247);
+  border-radius: 30px;
+  box-shadow: rgb(211, 211, 211) 0px 0px 20px 0px;
+}
+
+.fifth-head {
+  position: absolute;
+  top: 10%;
+  left: 13%;
+}
+.fifth-head-content {
+  line-height: 70px;
+  color: #1f357f;
+  font-size: 1.4rem;
+}
+
+.fifth-list {
+  width: 422px;
+  list-style-type: none;
+  position: absolute;
+  top: 35%;
+  left: 14%;
+}
+.fifth-list[li] {
+  padding: 10px;
+}
+.fifth-list-items {
+  padding: 10px;
+}
+
+.fifth-list-items::before {
+  content: "\2022";
+  color: #565add;
+  font-weight: 300;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1rem;
 }
