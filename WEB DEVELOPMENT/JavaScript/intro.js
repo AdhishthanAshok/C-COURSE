@@ -106,6 +106,12 @@ function switchcase(val) {
 console.log(switchcase("c"));
 console.log(switchcase(5));
 
+if (15 <= 14) {
+  console.log("\n15");
+} else {
+  console.log("\n14");
+}
+
 function multipleswitch(value) {
   var answer2 = "";
   switch (value) {
