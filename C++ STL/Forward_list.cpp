@@ -10,7 +10,7 @@ int main(){
     int a;
     for(int i = 0 ; i<size ; i++){
         cin>> a;
-        flist.push_front(a);
+        flist.push_front(a); 
     }
         cout<<endl << "Forward List :  ";
                                   // Values will be printed reverse because push happens on the front side
