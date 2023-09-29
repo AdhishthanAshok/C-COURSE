@@ -1,3 +1,11 @@
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  $("#name").text(profile.getName());
+  $("#email").text(profile.getEmail());
+  $("#image").attr("src", profile.getImageURL());
+  $;
+}
+
 const accessKey = "7sG_B0rIACi-nVomByvGazIsUGRYeblZFmZ8gX_rVTg";
 
 const formEl = document.querySelector("form");
