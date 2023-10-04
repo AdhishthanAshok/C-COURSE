@@ -21,9 +21,6 @@ body {
 .translator_property {
   border: 1px solid #c7c7c783;
 }
-select {
-  background-color: white;
-}
 .translator_property .nuv_item {
   display: flex;
   width: 100%;
@@ -42,7 +39,7 @@ select {
   font-weight: 500;
   color: #606060;
   cursor: pointer;
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
 }
 .translator_property .nuv_item li select:hover {
   color: #111;
@@ -51,6 +48,7 @@ select {
   font-size: 22px;
   color: #606060;
   cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
 .bx-transfer:hover {
@@ -59,9 +57,7 @@ select {
 
 .write_box {
   display: flex;
-}
-.Property_trans {
-  background-color: #606060;
+  margin-top: 15px;
 }
 .Property_from,
 .Property_trans {
@@ -79,8 +75,34 @@ select {
   color: #606060;
   position: relative;
 }
+.write_box textarea:nth-child(1) {
+  border-right: 1px solid #c7c7c7;
+}
 .write_box .icons {
   position: absolute;
   right: 0;
   bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.icons .bx {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  background: #ddd;
+  line-height: 35px;
+  font-size: 18px;
+  color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.icons .bx:hover {
+  background: #606060;
+  color: wheat;
 }
