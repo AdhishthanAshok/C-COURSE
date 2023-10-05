@@ -4,6 +4,7 @@ let transText = document.querySelector(".toTranslate");
 let fromVoice = document.querySelector(".from");
 let toVoice = document.querySelector(".to");
 
+// making the option  value interact with the API
 langOption.forEach((get, con) => {
   for (let countryCode in language) {
     let selected;
@@ -17,6 +18,7 @@ langOption.forEach((get, con) => {
   }
 });
 
+// making the tranlastion translateed live
 fromText.addEventListener("input", function () {
   let content = fromText.value;
   fromContent = langOption[0].value;
@@ -31,6 +33,7 @@ fromText.addEventListener("input", function () {
     });
 });
 
+// making the text to voice feature for the Input
 fromVoice.addEventListener("click", function () {
   let fromTalk;
   fromTalk = new SpeechSynthesisUtterance(fromText.value);
@@ -38,6 +41,7 @@ fromVoice.addEventListener("click", function () {
   speechSynthesis.speak(fromTalk);
 });
 
+// making the text to voice feature for the output
 toVoice.addEventListener("click", function () {
   let fromTalk;
   fromTalk = new SpeechSynthesisUtterance(transText.value);
