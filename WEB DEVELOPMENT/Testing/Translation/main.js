@@ -1,3 +1,4 @@
+
 let langOption = document.querySelectorAll("select");
 let fromText = document.querySelector(".fromText");
 let transText = document.querySelector(".toTranslate");
@@ -38,7 +39,9 @@ fromVoice.addEventListener("click", function () {
   let fromTalk;
   fromTalk = new SpeechSynthesisUtterance(fromText.value);
   fromTalk.lang = langOption[0].value;
+  console.log('Attempting to speak:', fromTalk);
   speechSynthesis.speak(fromTalk);
+  console.log("second icon clicked");
 });
 
 // making the text to voice feature for the output
@@ -46,5 +49,9 @@ toVoice.addEventListener("click", function () {
   let fromTalk;
   fromTalk = new SpeechSynthesisUtterance(transText.value);
   fromTalk.lang = langOption[1].value;
+  console.log('Attempting to speak:', fromTalk);
   speechSynthesis.speak(fromTalk);
+  console.log("second icon clicked");
+  console.log('Selected language code:', langOption[1].value);
+
 });
