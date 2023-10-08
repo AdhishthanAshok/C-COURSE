@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(80deg, rgb(11, 22, 146), rgb(5, 163, 255),  rgb(16, 3, 155));
 }
 .container {
   width: 900px;
@@ -105,4 +106,15 @@ body {
 .icons .bx:hover {
   background: #606060;
   color: wheat;
+}
+#select_button_div{
+  display: flex;
+  position: absolute;
+}
+#select_button{
+  position: fixed;
+  appearance:none;
+  top: 80%;
+  padding: 10px 80px 10px 80px;
+  left: 45%;
 }

@@ -1,4 +1,4 @@
-let langOption = document.querySelectorAll("select");
+let langOption = document.querySelectorAll(".select_languages");
 let fromText = document.querySelector(".fromText");
 let transText = document.querySelector(".toTranslate");
 let fromVoice = document.getElementById("fromSpeech");
@@ -48,21 +48,4 @@ toVoice.addEventListener("click", function () {
   toTalk.lang = langOption[1].value;
   window.speechSynthesis.speak(toTalk);
 });
-
-
-
-// let speech = new SpeechSynthesisUtterance();
-
-// document.getElementById("fromSpeech").addEventListener("click" , () =>{
-//     speech.text = document.getElementsByClassName("fromText").value;
-//     window.speechSynthesis.speak(speech);
-// })
-// document.getElementById("toSpeech").addEventListener("click" , () =>{
-//     speech.text = document.getElementsByClassName("toTranslate").value;
-//     window.speechSynthesis.speak(speech);
-// })
-
-
-
-
 

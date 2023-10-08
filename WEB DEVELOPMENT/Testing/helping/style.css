@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      
+}
+body{
+    height: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-family: sans-serif;
+   background-color:  #54346c;
+}
+/* .custom_select{
+    position: relative;
+    display: inline-block;
+    color: #403d84;
+} */
+/* .custom_select */
+select{
+    
+    border-radius:20px;
+    cursor :pointer; 
+    appearance: none;
+    background-image: url(./dropdown.png);
+     background-repeat: no-repeat;
+     background-size: 15px;
+     padding: 10px 200px 10px 200px;
+     background-position-x: calc(100% - 20px) ;
+     background-position-y: 12px ;
+     background-color: rgb(120, 112, 181);
+     /* height: 20px; */
+     /* align-items: center; */
+     /* justify-content: center; */
+     /* width: 20px; */
+     /* min-height: 35px; */
+     /* border: 2px ; */
+     /* float: right ; */
+     
+}
+
+/* #nameid{ 
+}
+ */
+
+
