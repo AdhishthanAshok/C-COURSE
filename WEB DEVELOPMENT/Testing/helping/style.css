@@ -20,7 +20,6 @@ body{
 } */
 /* .custom_select */
 select{
-    
     border-radius:20px;
     cursor :pointer; 
     appearance: none;
