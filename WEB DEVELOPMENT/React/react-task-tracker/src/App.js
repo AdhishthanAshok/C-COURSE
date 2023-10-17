@@ -4,14 +4,9 @@ import Header from "./Components/Header";
 const App = () => {
   return (
     <div className="container">
-      <Header />
+      <Header /> {/* Include the Header component here */}
     </div>
   );
 };
 
-// class App extends React.Component {
-//   render() {
-//     return <h1>Hello from a Class</h1>;
-//   }
-// }
 export default App;
