@@ -1,4 +1,5 @@
 const { Console } = require("console");
+const fs = require("fs");
 const http = require("http");
 
 const port = process.env.PORT || 3000;
@@ -9,18 +10,17 @@ const server = http.createServer((req, res) => {
   console.log(req.url);
   if (req.url == "/") {
     res.statusCode = 200;
-    res.end(
-      "<h1>This is my Name</h1> <p>This is the way to make a program</p>"
-    );
+    const data = fs.readFileSync("index.html");
+    res.end(data.toString());
   } else if (req.url == "/about") {
     res.statusCode = 200;
     res.end(
-      "<h1>This is my About page</h1> <p>This is the way to make a program</p>"
+      "<h1>This is my About Page</h1> <p>This is the way to make a program</p>"
     );
-  } else if (req.url == "/home") {
+  } else if (req.url == "/adi") {
     res.statusCode = 200;
     res.end(
-      "<h1>This is my Home page</h1> <p>This is the way to make a program</p>"
+      "<h1>This is my Name</h1> <p>This is the way to make a program</p>"
     );
   } else {
     res.statusCode = 404;
