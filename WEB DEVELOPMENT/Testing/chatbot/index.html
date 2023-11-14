@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI API Example</title>
+  </head>
+  <body>
+    <script>
+      async function main() {
+        const apiKey = "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"; // Replace with your actual API key
+        const apiUrl =
+          "https://api.openai.com/v1/engines/gpt-3.5-turbo/completions";
+
+        const requestData = {
+          messages: [
+            { role: "system", content: "You are a helpful assistant." },
+            { role: "user", content: "Who won the world series in 2020?" },
+            {
+              role: "assistant",
+              content: "The Los Angeles Dodgers won the World Series in 2020.",
+            },
+            { role: "user", content: "Where was it played?" },
+          ],
+        };
+
+        try {
+          const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify(requestData),
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          const responseData = await response.json();
+          console.log(responseData.choices[0]);
+        } catch (error) {
+          console.error("Error making API request:", error.message);
+        }
+      }
+
+      main();
+    </script>
+  </body>
+</html>
