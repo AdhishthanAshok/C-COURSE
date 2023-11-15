@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <title>Chat AI</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Question</title>
   </head>
   <body>
-    <div class="chat-ai"></div>
-    <script src="script2.js"></script>
+    <label for="question">Ask a question:</label>
+    <input type="text" id="questionInput" />
+    <button onclick="askQuestion()">Ask</button>
+    <div id="responseContainer"></div>
     <script>
-      new ChatAI({
-        container: ".chat-ai",
-        api_key: "YOUR_API_KEY",
-        model: "gpt-3.5-turbo",
-      });
+      async function askQuestion() {
+        const question = document.getElementById("questionInput").value;
+
+        const url = "https://robomatic-ai.p.rapidapi.com/api";
+        const options = {
+          method: "POST",
+          headers: {
+            "content-type": "application/x-www-form-urlencoded",
+            "X-RapidAPI-Key":
+              "05d4449ebemsh26f52f204d83b58p14a84bjsne331f949f69b",
+            "X-RapidAPI-Host": "robomatic-ai.p.rapidapi.com",
+          },
+          body: new URLSearchParams({
+            in: question,
+            op: "in",
+            cbot: "1",
+            SessionID: "RapidAPI1",
+            cbid: "1",
+            key: "RHMN5hnQ4wTYZBGCF3dfxzypt68rVP",
+            ChatSource: "RapidAPI",
+            duration: "1",
+          }),
+        };
+
+        try {
+          const response = await fetch(url, options);
+          const result = await response.json();
+
+          // Extract the "out" value from the response
+          const outResponse = result.out;
+
+          // Display the "out" value in a new paragraph
+          const responseContainer =
+            document.getElementById("responseContainer");
+          responseContainer.innerHTML = `<p>${outResponse}</p>`;
+        } catch (error) {
+          console.error(error);
+        }
+      }
     </script>
   </body>
 </html>

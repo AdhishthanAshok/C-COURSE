@@ -1,38 +1,27 @@
-async function main() {
-  const apiKey = ""; // Replace with your actual API key
-  const apiUrl = "https://api.openai.com/v1/completions";
+const url = 'https://robomatic-ai.p.rapidapi.com/api';
+const options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/x-www-form-urlencoded',
+		'X-RapidAPI-Key': '05d4449ebemsh26f52f204d83b58p14a84bjsne331f949f69b',
+		'X-RapidAPI-Host': 'robomatic-ai.p.rapidapi.com'
+	},
+	body: new URLSearchParams({
+		in: 'What\'s 2 plus 5?',
+		op: 'in',
+		cbot: '1',
+		SessionID: 'RapidAPI1',
+		cbid: '1',
+		key: 'RHMN5hnQ4wTYZBGCF3dfxzypt68rVP',
+		ChatSource: 'RapidAPI',
+		duration: '1'
+	})
+};
 
-  const requestData = {
-    messages: [
-      { role: "system", content: "You are a helpful Programming Bot." },
-      { role: "user", content: "Difference Between C and C++ Languages" },
-      {
-        role: "Programming Bot",
-        content: "The Los Angeles Dodgers won the World Series in 2020.",
-      },
-      { role: "user", content: "Where was it played?" },
-    ],
-  };
-
-  try {
-    const response = await fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify(requestData),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const responseData = await response.json();
-    console.log(responseData.choices[0]);
-  } catch (error) {
-    console.error("Error making API request:", error.message);
-  }
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
 }
-
-main();
