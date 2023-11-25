@@ -14,7 +14,7 @@ public:
     void converting(void);
 };
 
-void binary ::entering()
+void binary :: entering()
 {
     cout << "Enter a number: " << endl;
     cin >> s;
