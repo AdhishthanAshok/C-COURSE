@@ -123,18 +123,18 @@ int main()
     printf("\n");
     printf("Enter the index you want to store the element: \n");
     scanf("%d" , &index);
-    // printf("Enter the element you want to store in the List : \n");
-    // scanf("%d", &data);
+    printf("Enter the element you want to store in the List : \n");
+    scanf("%d", &data);
 
     // inserting new element at first .
 
     // head = insertatfirst(head, data);
 
-     // inserting new element at index .
+    //  inserting new element at index .
 
     head = insertatIndex(head, data , index);
 
-     // inserting new element at the end .
+    //  inserting new element at the end .
 
     // head = insertatend(head, data);
     

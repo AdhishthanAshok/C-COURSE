@@ -25,10 +25,10 @@ struct node * fourth;
 
  // Alloating memony in heap for each node
 
-head  = (struct node *) malloc(sizeof(struct node * ));
-second  = (struct node *) malloc(sizeof(struct node * ));
-third = (struct node *) malloc(sizeof(struct node * ));
-fourth = (struct node *) malloc(sizeof(struct node * ));
+head  = (struct node *) malloc(sizeof(struct node * ));  // For C++  we will use the new Operator as : node* head = new node(0,"71");
+second  = (struct node *) malloc(sizeof(struct node * ));// For C++  we will use the new Operator as : node* second = new node(1,"7");
+third = (struct node *) malloc(sizeof(struct node * ));// For C++  we will use the new Operator as : node* third = new node(2,"11");
+fourth = (struct node *) malloc(sizeof(struct node * ));// For C++  we will use the new Operator as : node* fourth = new node(3,"21");
 
 // joining head and second nodes.
 
