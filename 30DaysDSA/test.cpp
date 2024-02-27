@@ -1,28 +1,17 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    cout << "Enter the size of the array : ";
-    int size;
-    cin >> size;
-    int a[size];
-    cout << "\nEnter the elements of the array : ";
-    for (int i = 0; i < size; i++)
-    {
-        cin >> a[i];
-    }
+int main(){
+int temp[10];
+    cout <<sizeof(temp)<<endl;
+    cout <<sizeof(*temp)<<endl;
+    cout <<sizeof(&temp)<<endl;
+    int *ptr = &temp[0];
+    cout <<sizeof(ptr) << endl;
+    cout <<sizeof(*ptr) << endl;
+    cout <<sizeof(&ptr) << endl;
 
-    set<int> s;
-    cout << "\nInserting values in set\n ";
-    for (auto i : a)
-    {
-        s.insert(i);
-    }
-    cout << "\nUnique Elements are :  ";
-    for (auto it : s)
-    {
-        cout << it << " ";
-    }
-    return 0;
+return 0;
+
 }
