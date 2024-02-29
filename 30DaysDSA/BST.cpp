@@ -28,7 +28,8 @@ void insertnode(node *root, int key)
         }
         else if (root->data == key)
         {
-            cout << "\nElement is already present there. ";
+            cout << "\nElement is already present there. "
+                 << root->data;
             return;
         }
         else if (root->data > key)
@@ -60,6 +61,39 @@ void inorder(node *root)
         cout << root->data << " ";
         inorder(root->right);
     }
+}
+void preorder(node *root)
+{
+    if (root != NULL)
+    {
+        cout << root->data << " ";
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+
+int getheight(node *root)
+{
+    node *temp = root;
+    if (temp == NULL)
+        return 0;
+    else
+    {
+        int lheight = getheight(temp->left);
+        int rheight = getheight(temp->right);
+
+        if (lheight > rheight)
+        {
+            lheight++;
+            return lheight;
+        }
+        else
+        {
+            rheight++;
+            return rheight;
+        }
+    }
+    return 0;
 }
 
 int main()
@@ -93,6 +127,11 @@ int main()
         insertnode(p, k);
     }
 
+    cout << "\n Inorder Tree is : ";
     inorder(p);
+    cout << "\n Preorder Tree is : ";
+    preorder(p);
+
+    cout << "\nHeight of the tree is : " << getheight(p);
     return 0;
 }
