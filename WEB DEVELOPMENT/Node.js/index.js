@@ -1,0 +1,6 @@
+// (function (exports, require, module, __filename, __dirname) {   --> this line is used by node selfly .. we have no need to write this.... 
+  const kon = require("./second");
+  console.log("Hello World", kon);
+  console.log(exports, require, module, __filename, __dirname); // --> This will give you the info about each parameter...
+// }
+// 
