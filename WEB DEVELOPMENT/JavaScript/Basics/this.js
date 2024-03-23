@@ -26,7 +26,7 @@ console.log(
 /******** ARROW FUNCTIONS **********/
 
 const chai = () => {
-  let username = "hitesh";
+  let username = "adi";
   console.log(this); // Here This will give '{}'  empty parenthesis value
 };
 chai(); // Print '{}'

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #212121;
+      }
+      #main {
+        position: fixed;
+        top: 10vh;
+        left: 75vh;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 30vw;
+        height: auto;
+        border: 2px solid white;
+      }
+      #result {
+        width: 100%;
+        height: 10vh;
+        border: 1px solid white;
+      }
+      #answer {
+        color: white;
+        height: auto;
+        float: right;
+        font-size: 50px;
+        padding-right: 10px;
+      }
+      #buttons {
+        width: 100%;
+        height: auto;
+      }
+      .button {
+        display: flex;
+        text-align: center;
+      }
+      .values {
+        width: 15vw;
+        height: 10vh;
+        color: white;
+        font-size: 30px;
+        border: 2px solid green;
+        text-align: center;
+        background-color: rgb(54, 51, 51);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="result">
+        <p id="answer"></p>
+      </div>
+      <div id="buttons">
+        <div class="button">
+          <div class="values">AC</div>
+          <div class="values">X</div>
+          <div class="values">+/-</div>
+          <div class="values">/</div>
+        </div>
+        <div class="button">
+          <div class="values">7</div>
+          <div class="values">8</div>
+          <div class="values">9</div>
+          <div class="values">x</div>
+        </div>
+        <div class="button">
+          <div class="values">4</div>
+          <div class="values">5</div>
+          <div class="values">6</div>
+          <div class="values">-</div>
+        </div>
+        <div class="button">
+          <div class="values">1</div>
+          <div class="values">2</div>
+          <div class="values">3</div>
+          <div class="values">+</div>
+        </div>
+        <div class="button">
+          <div class="values">%</div>
+          <div class="values">0</div>
+          <div class="values">.</div>
+          <div class="values">&#61;</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const buttons = document.querySelectorAll(".values");
+      const display = document.getElementById("answer");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          if (display.textContent === "Tameez se likho..") {
+            display.textContent = "";
+          }
+
+          const value = this.textContent;
+
+          if (!isNaN(value) || value === ".") {
+            display.textContent += value;
+          } else if (value === "AC") {
+            display.textContent = "";
+          } else if (value === "=") {
+            try {
+              display.textContent = eval(display.textContent);
+            } catch (error) {
+              display.textContent = "Tameez se likho..";
+            }
+          } else {
+            display.textContent += " " + value + " ";
+          }
+          const ansLength = display.textContent.length;
+          if (ansLength > 15) {
+            display.textContent = "Aaur bada likhde BC!";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

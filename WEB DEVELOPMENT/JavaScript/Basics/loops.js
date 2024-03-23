@@ -4,38 +4,39 @@ const coding = ["js", "ruby", "java", "python", "cpp"];
 //     console.log(val);
 // } )
 
-// coding.forEach( (item) => {
-//     console.log(item);
-// } )
+// coding.forEach((item) => {
+//   console.log(item);
+// });
 
-// function printMe(item){
-//     console.log(item);
+// function printMe(item) {
+//   console.log("Hello " + item);
 // }
 
-// coding.forEach(printMe)
+// coding.forEach(printMe);
 
-// coding.forEach( (item, index, arr)=> {
-//     console.log(item, index, arr);
-// } )
+// coding.forEach((item, index, arr) => {
+//   console.log("Hello World " + item, index, arr);
+// });
 
 const myCoding = [
   {
     languageName: "javascript",
-    languageFileName: "js",
+    languageFileName: ".js",
   },
   {
     languageName: "java",
-    languageFileName: "java",
+    languageFileName: ".java",
   },
   {
     languageName: "python",
-    languageFileName: "py",
+    languageFileName: ".py",
   },
 ];
 
-myCoding.forEach((item) => {
-  console.log(item.languageName);
-});
+// myCoding.forEach((item) => {
+//   console.log("Hello Languages " + item.languageName);
+//   console.log("Hello Languages " + item.languageFileName);
+// });
 
 // const coding = ["js", "ruby", "java", "python", "cpp"]
 
@@ -50,19 +51,19 @@ myCoding.forEach((item) => {
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
+// const myNums = myNums.filter((num) => {
+//   return num > 4;
+// });
 
-// const newNums = []
+// const myNums = [];
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
+myNums.forEach((num) => {
+  if (num >= 9) {
+    myNums.push(num);
+  }
+});
 
-// console.log(newNums);
+console.log("myNums :  " + myNums);
 
 const books = [
   { title: "Book One", genre: "Fiction", publish: 1981, edition: 2004 },

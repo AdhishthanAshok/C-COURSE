@@ -1,18 +1,18 @@
-// const myObj = {
-//   name: "adi",
-//   age: 19,
-//   fullName: "AdiAshok", // Prettier extension remove the key's quotes , real is --> "fullName" : "AdiAshok"
-//   location: "Noida",
-//   email: "adi@gmail.com",
-//   isLoggedin: false,
-//   lastLoginDays: ["Monday", "Tuesday"],
-// };
+const myObj = {
+  name: "adi",
+  age: 19,
+  fullName: "AdiAshok", // Prettier extension remove the key's quotes , real is --> "fullName" : "AdiAshok"
+  location: "Noida",
+  email: "adi@gmail.com",
+  isLoggedin: false,
+  lastLoginDays: ["Monday", "Tuesday"],
+};
 
-// // two methods of calling a object are from . and [ ]   --> [ ] is better from . because it also workds for strings
-// console.log(myObj.name);
-// console.log(myObj["email"]);
-// console.log(myObj["fullName"]);
-// console.log(myObj.fullName); // Will not work
+// two methods of calling a object are from . and [ ]   --> [ ] is better from . because it also workds for strings
+console.log(myObj.name);
+console.log(myObj["email"]);
+console.log(myObj["fullName"]);
+console.log(myObj.fullName); // Will not work
 
 // // Symbol declaretion with correct syntax
 
@@ -99,4 +99,3 @@ console.log(Object.values(nestedObj));
 console.log(Object.entries(nestedObj));
 
 console.log(nestedObj.hasOwnProperty("age")); // Search the entry . if have or not ... return answer in Boolean
- 

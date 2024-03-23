@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+  </head>
+  <body style="background-color: #212121">
+    <h1 style="color: white">Hello World!!</h1>
+    <button id="start">Start</button>
+    <button id="end">End</button>
+    <script>
+      //   const newFuncTimeout = function () {
+      //     console.log("Hiiiiii...");
+      //   };
+      //   setTimeout(newFuncTimeout, 3000);
+
+      document.querySelector("#start").addEventListener("click", function () {
+        const startInterval = function () {
+          console.log("Hello Start Button");
+        };
+        const stopInterval = setInterval(startInterval, 1000);
+        console.log("Start button clicked");
+
+        document.querySelector("#end").addEventListener("click", function () {
+          console.log("End button clicked");
+          clearInterval(stopInterval);
+        });
+      });
+    </script>
+  </body>
+</html>
