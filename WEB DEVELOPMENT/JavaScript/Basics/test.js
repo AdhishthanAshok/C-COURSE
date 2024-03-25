@@ -70,7 +70,7 @@ console.log("2" === 2); // False   --> because of different data types
 // DATA TYPES (TWO TYPES)
 
 // Primitive Data types are of 7 types --> String , Number  , Boolean , null , undefined , Symbol , BingInt
-// Referense (Non Primitive Data Types)  --> Array , Objects , Functions
+// Reference (Non Primitive Data Types)  --> Array , Objects , Functions
 
 // Javascript is Dynamically Typed Language
 
@@ -113,5 +113,3 @@ console.log(myfunction2(5, 4)); // Output will be  : Hello World and 20
 // Non Primitive Data Types uses  Heap Memory
 
 let myYoutubename = "Adhishthan Ashok";
-
-
