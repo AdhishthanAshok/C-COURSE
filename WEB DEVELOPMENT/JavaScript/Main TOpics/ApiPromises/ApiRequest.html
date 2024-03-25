@@ -18,7 +18,7 @@
     xhr.onreadystatechange = function () {
       console.log(xhr.readyState);
       if (xhr.readyState === 4) {
-        const data = JSON.parse(this.responseText);
+        const data = JSON.parse(this.responseText);     // JSON.parse() convert string data type into JSON onject 
         console.log(typeof data);
         console.log(data.followers);
       }

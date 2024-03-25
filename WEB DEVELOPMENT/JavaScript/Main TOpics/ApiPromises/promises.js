@@ -1,24 +1,24 @@
-const promiseOne = new Promise(function (resolve, reject) {
-  //Do an async task
-  // DB calls, cryptography, network
-  setTimeout(function () {
-    console.log("Async task is compelete");
-    resolve();
-  }, 1000);
-});
+// const promiseOne = new Promise(function (resolve, reject) {
+//   //Do an async task
+//   // DB calls, cryptography, network
+//   setTimeout(function () {
+//     console.log("Async task is compelete");
+//     resolve(); // after writing resolve() , then it connectects to the .then()
+//   }, 1000);
+// });
 
-promiseOne.then(function () {
-  console.log("Promise consumed");
-});
+// promiseOne.then(function () {
+//   console.log("Promise consumed");
+// });
 
-new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    console.log("Async task 2");
-    resolve();
-  }, 1000);
-}).then(function () {
-  console.log("Async 2 resolved");
-});
+// new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     console.log("Async task 2");
+//     resolve();
+//   }, 1000);
+// }).then(function () {
+//   console.log("Async 2 resolved");
+// });
 
 const promiseThree = new Promise(function (resolve, reject) {
   setTimeout(function () {
@@ -32,7 +32,7 @@ promiseThree.then(function (user) {
 
 const promiseFour = new Promise(function (resolve, reject) {
   setTimeout(function () {
-    let error = true;
+    let error = false;
     if (!error) {
       resolve({ username: "hitesh", password: "123" });
     } else {
@@ -47,6 +47,7 @@ promiseFour
     return user.username;
   })
   .then((username) => {
+    // chaining of .then .... the value returned from first .then is taken by the next .then   ... also called Thenable
     console.log(username);
   })
   .catch(function (error) {
