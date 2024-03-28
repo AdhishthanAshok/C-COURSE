@@ -1,0 +1,31 @@
+.Card {
+  position: absolute;
+  top: 20vh;
+  left: 40vw;
+  border: 3px solid gray;
+  border-radius: 10%;
+  padding: 50px;
+}
+.button {
+  margin: 10px;
+  border: 2px solid green;
+  width: 15vw;
+  transition: scale 0.25s;
+}
+.button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+.button:active {
+  color: rgb(38, 133, 93);
+}
+#counter {
+  color: aqua;
+}
+h2 {
+  text-align: center;
+}
+#app {
+  text-decoration: underline;
+  color: blue;
+}
