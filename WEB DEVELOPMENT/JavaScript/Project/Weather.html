@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather APP</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #212121;
+      }
+      #main {
+        border-radius: 20px;
+        border: 1px solid red;
+        background-color: rgb(0, 80, 80);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50vh;
+        width: 50vw;
+      }
+      #inputText,
+      button {
+        width: 25%;
+        height: 20%;
+        padding: 10px 18px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        transition: width 0.4s ease-in-out;
+      }
+      #inputText:focus {
+        width: 30%;
+      }
+      p,
+      label {
+        color: white;
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div style="margin: 5vh 0 0 5vw">
+        <label for="input">Enter the city name : </label>
+        <input type="text" id="inputText" />
+        <button id="buttonTemp" style="display: inline-block">
+          Check Weather
+        </button>
+      </div>
+      <div style="margin: 5vh 0 0 5vw">
+        <p style="display: inline">Temperature :</p>
+        <p id="resultTemp" style="display: inline"></p>
+      </div>
+      <div style="margin: 5vh 0 0 5vw">
+        <p style="display: inline">Humidity :</p>
+        <p id="resultHumidity" style="display: inline"></p>
+      </div>
+      <div style="margin: 5vh 0 0 5vw">
+        <p style="display: inline">Description :</p>
+        <p id="resultDescription" style="display: inline"></p>
+      </div>
+    </div>
+
+    <script>
+      const button = document.getElementById("buttonTemp");
+      const resultTemp = document.getElementById("resultTemp");
+      const resultHumidity = document.getElementById("resultHumidity");
+      const resultDescription = document.getElementById("resultDescription");
+      const key = `7ee90552dfaab9a93592fb425de1076a`;
+
+      button.addEventListener("click", () => {
+        const inputText = document.getElementById("inputText").value;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputText}&appid=${key}`;
+
+        fetch(`${url}`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            resultTemp.innerHTML = `${data.main.temp}`;
+            resultHumidity.innerHTML = `${data.main.humidity}`;
+            resultDescription.innerHTML = `${data.weather[0].description}`;
+          })
+          .catch((error) => {
+            resultTemp.innerHTML = `Not Able to Fetch data`;
+          });
+      });
+    </script>
+  </body>
+</html>

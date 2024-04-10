@@ -48,7 +48,7 @@ promiseFour
   })
   .then((username) => {
     // chaining of .then .... the value returned from first .then is taken by the next .then   ... also called Thenable
-    console.log(username);
+    console.log(username); 
   })
   .catch(function (error) {
     console.log(error);
