@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  background-color: #212121;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.value_display {
+  margin: 5vh;
+  font-weight: 600;
+  font-size: xx-large;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 5%;
+  justify-content: space-around;
+  align-items: center;
+}
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: aqua;
+  font-size: large;
+  font-weight: 600;
+}

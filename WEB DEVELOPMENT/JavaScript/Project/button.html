@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="add_here">
+      <h3>Hello</h3>
+    </div>
+    <button onclick="updateDom()" id="button">Add</button>
+
+    <script>
+      const add_text = document.getElementById("add_here");
+      function updateDom() {
+        const new_text = document.createElement("div");
+        new_text.innerHTML = `
+          <div>
+            <p>Hello World</p>
+            <img
+              style="height:300px"
+              src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
+              alt=""
+            />
+          </div>
+        `;
+        add_text.appendChild(new_text);
+      }
+    </script>
+  </body>
+</html>
