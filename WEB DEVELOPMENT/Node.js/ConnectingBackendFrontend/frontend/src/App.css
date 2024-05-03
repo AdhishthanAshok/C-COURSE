@@ -4,7 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
-
+h1 {
+  border: 1px solid white;
+  padding: 5vh;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
