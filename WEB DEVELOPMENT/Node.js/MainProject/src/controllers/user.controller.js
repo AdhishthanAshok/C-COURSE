@@ -39,6 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
   //console.log("email: ", email);
 
   if (
+    // .some() function is used to find if a element is satisfying a given condition , if yes return true , else false
     [fullName, email, username, password].some((field) => field?.trim() === "")
   ) {
     throw new ApiError(400, "All fields are required");
