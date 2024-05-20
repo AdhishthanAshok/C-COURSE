@@ -36,6 +36,6 @@ int main()
     }
     fill(vis, vis + N, false); // make all vis values false another method to do this , is to make a loop and make false for every value
     cout << "DFS traversal starting from vertex 0:" << endl;
-    dfs(1);
+    dfs(1); // for connected components counting , just run this in a loop 'n' times , and increment the count whenever a new vertice is reached , else continue
     return 0;
 }
