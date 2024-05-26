@@ -9,17 +9,17 @@ void dfs(int vertex)
 {
     /*TAKE ACTION ONVERTEX AFTER ECTERING THE VERTEX*/
     // if(vis[vertex]) return; we can check the line 15 if statement here also , before entering the vertex
-    cout << vertex << endl;
-    vis[vertex] = true;
-    for (int child : graph[vertex])
-    {
-        cout << "parent : " << vertex << " Child : " << child << endl;
-        if (vis[child])
-            continue;
-        /*TAKE ACTION ON CHILD BEFORE ECTERING THE CHILD NODE*/
-        dfs(child);
-        /*TAKE ACTION ON CHILD AFTER EXITING CHILD NODE*/
-    }
+        cout << vertex << endl;
+        vis[vertex] = true;
+        for (int child : graph[vertex])
+        {
+            cout << "parent : " << vertex << " Child : " << child << endl;
+            if (vis[child])
+                continue;
+            /*TAKE ACTION ON CHILD BEFORE ECTERING THE CHILD NODE*/
+            dfs(child);
+            /*TAKE ACTION ON CHILD AFTER EXITING CHILD NODE*/
+        }
     /*TAKE ACTION ON VERTEX BEFORE EXITING THE VERTEX*/
 }
 
