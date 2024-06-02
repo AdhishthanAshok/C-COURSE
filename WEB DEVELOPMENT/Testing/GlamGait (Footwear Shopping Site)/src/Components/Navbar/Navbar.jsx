@@ -1,126 +1,173 @@
-import React, { useState } from "react";
-import logo from "../assets/logo.jpg";
-import profile_logo from "../assets/profile_icon.jpg";
+import { Fragment, useState } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { Bars3Icon } from "@heroicons/react/24/outline";
+import logo_img from "../assets/logo.jpg";
+import profile_img from "../assets/profile_icon.jpg";
 
-function Navbar() {
-  const [menu, setMenu] = useState("shop");
+const navigation = [
+  { name: "Shop", to: "/", current: true },
+  { name: "Men", to: "/mens", current: false },
+  { name: "Women", to: "/womens", current: false },
+  { name: "Kids", to: "/kids", current: false },
+];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+export default function Navbar() {
+  const [menu, setMenu] = useState("Shop");
+
   return (
-    <div className="flex justify-between items-center py-1 px-4 lg:px-8">
-      <div className="flex w-1/4 sm:w-1/5 md:w-1/6 lg:w-1/8 xl:w-1/10 items-center cursor-pointer">
-        <img src={logo} alt="logo" className="h-10vh max-h-16" />
-      </div>
-      <div className="flex flex-col sm:flex-row sm:justify-end flex-grow sm:items-center">
-        <ul className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 lg:gap-6">
-          <li
-            onClick={() => {
-              setMenu("shop");
-            }}
-            className="cursor-pointer text-gray-800 transition-all ease-250"
-          >
-            <Link
-              style={{ textDecoration: "none", color: "Black" }}
-              to="/"
-              className="text-gray-800"
-            >
-              Shop
-            </Link>
-            {menu === "shop" ? (
-              <hr className="border-none bg-red-500 rounded w-4/5 h-0.5 mx-auto mt-1" />
-            ) : (
-              <></>
-            )}
-          </li>
-          <li
-            onClick={() => {
-              setMenu("Men");
-            }}
-            className="cursor-pointer text-gray-800 transition-all ease-250"
-          >
-            <Link
-              style={{ textDecoration: "none", color: "Black" }}
-              to="/mens"
-              className="text-gray-800"
-            >
-              Men
-            </Link>
-            {menu === "Men" ? (
-              <hr className="border-none bg-red-500 rounded w-4/5 h-0.5 mx-auto mt-1" />
-            ) : (
-              <></>
-            )}
-          </li>
-          <li
-            onClick={() => {
-              setMenu("Women");
-            }}
-            className="cursor-pointer text-gray-800 transition-all ease-250"
-          >
-            <Link
-              style={{ textDecoration: "none", color: "Black" }}
-              to="/womens"
-              className="text-gray-800"
-            >
-              Women
-            </Link>
-            {menu === "Women" ? (
-              <hr className="border-none bg-red-500 rounded w-4/5 h-0.5 mx-auto mt-1" />
-            ) : (
-              <></>
-            )}
-          </li>
-          <li
-            onClick={() => {
-              setMenu("Kids");
-            }}
-            className="cursor-pointer text-gray-800 transition-all ease-250"
-          >
-            <Link
-              style={{ textDecoration: "none", color: "Black" }}
-              to="/kids"
-              className="text-gray-800"
-            >
-              Kids
-            </Link>
-            {menu === "Kids" ? (
-              <hr className="border-none bg-red-500 rounded w-4/5 h-0.5 mx-auto mt-1" />
-            ) : (
-              <></>
-            )}
-          </li>
-        </ul>
-      </div>
-      <div className="flex items-center ml-4 lg:ml-8">
-        <button
-          className="border-none"
-          onClick={() => {
-            setMenu("Login");
-          }}
-        >
-          <Link
-            style={{ textDecoration: "none", color: "white" }}
-            to="/login"
-            className="bg-black text-white rounded w-20 h-10 text-base sm:text-lg lg:text-xl transition-all ease-in-250 hover:cursor-pointer focus:w-16 focus:bg-aqua focus:text-gray-800 focus:h-12 focus:rounded-full focus:mr-2"
-          >
-            <button className="bg-black text-white rounded w-20 h-10 text-base sm:text-lg lg:text-xl transition-all ease-in-250">
-              Login
-            </button>
-          </Link>
-        </button>
-        <Link
-          style={{ textDecoration: "none" }}
-          to={"/profile"}
-          className="ml-4 h-8 rounded-full border-gray-400 border cursor-pointer"
-        >
-          <img
-            src={profile_logo}
-            alt="profile"
-            className="h-8 rounded-full border-gray-400 border cursor-pointer"
-          />
-        </Link>
-      </div>
+    <div className="bg-white">
+      <Disclosure as="nav" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        {({ open }) => (
+          <>
+            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div className="relative flex h-16 items-center justify-between">
+                <div className="absolute inset-y-0 left-0 flex justify-end mx-auto sm:hidden">
+                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <span className="absolute -inset-0.5" />
+                    <span className="sr-only">Open main menu</span>
+                    {open ? (
+                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    ) : (
+                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    )}
+                  </Disclosure.Button>
+                </div>
+                <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between">
+                  {/* Mobile menu button */}
+                  <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div className="flex flex-shrink-0 items-center">
+                      <img
+                        className="h-10 w-auto"
+                        src={logo_img}
+                        alt="Your Company"
+                      />
+                    </div>
+                  </div>
+                  {/* Navigation links */}
+                  <div className="hidden sm:ml-6 sm:block">
+                    <div className="flex space-x-4">
+                      {navigation.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.to}
+                          onClick={() => setMenu(item.name)}
+                          className={classNames(
+                            menu === item.name
+                              ? "bg-gray-900 text-white"
+                              : "text-black hover:bg-gray-700 hover:text-white",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <button
+                    type="button"
+                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  >
+                    <span className="absolute -inset-1.5" />
+                    <span className="sr-only">View notifications</span>
+                    <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  </button>
+                  {/* Profile dropdown */}
+                  <Menu as="div" className="relative ml-3">
+                    <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">Open user menu</span>
+                      <img
+                        className="h-8 w-8 rounded-full"
+                        src={profile_img}
+                        alt=""
+                      />
+                    </Menu.Button>
+                    <Transition
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/profile"
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-gray-700"
+                              )}
+                            >
+                              Your Profile
+                            </Link>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/settings"
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-gray-700"
+                              )}
+                            >
+                              Settings
+                            </Link>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/logout"
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-gray-700"
+                              )}
+                            >
+                              Sign out
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      </Menu.Items>
+                    </Transition>
+                  </Menu>
+                </div>
+              </div>
+            </div>
+            <Disclosure.Panel className="sm:hidden">
+              <div className="space-y-1 px-2 pb-3 pt-2">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.to}
+                    onClick={() => setMenu(item.name)}
+                    className={classNames(
+                      menu === item.name
+                        ? "bg-gray-900 text-white"
+                        : "text-black hover:bg-gray-700 hover:text-white",
+                      "block rounded-md px-3 py-2 text-base font-medium"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
     </div>
   );
 }
-
-export default Navbar;
