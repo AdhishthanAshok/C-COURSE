@@ -8,9 +8,9 @@ app.get("/api/jokes", (req, res) => {
     { id: 2, title: "2 Joke", content: "This is a Joke" },
     { id: 3, title: "3 Joke", content: "This is a Joke" },
     { id: 4, title: "4 Joke", content: "This is a Joke" },
-    { id: 5, title: "5 Joke", content: "This is a Joke" },
+    { id: 6, title: "5 Joke", content: "This is a Joke" },
     { id: 6, title: "6 Joke", content: "This is a Joke" },
-    { id: 7, title: "6 Joke", content: "This is a Joke" },
+    { id: 6, title: "7 Joke", content: "This is a Joke" },
   ];
   res.send(joke);
 });
