@@ -24,9 +24,9 @@ function App() {
           joke,
           index // <-- when you wrap something in parentheses ( ), it implicitly returns that value. So, in this case, the arrow function implicitly returns the JSX <div> element.
         ) => (
-          <div key={index}>
-            {/* <h3 style={{ display: "inline-block" }}> id : {joke.id}</h3>
-            <h3 style={{ display: "inline-block" }}>&nbsp; Index : {index}</h3> */}
+          <div key={joke.id}>
+            <h3 style={{ display: "inline-block" }}> id : {joke.id}</h3>
+            <h3 style={{ display: "inline-block" }}>&nbsp; Index : {index}</h3>
             <h3>{joke.title}</h3>
             <p>{joke.content}</p>
           </div>
