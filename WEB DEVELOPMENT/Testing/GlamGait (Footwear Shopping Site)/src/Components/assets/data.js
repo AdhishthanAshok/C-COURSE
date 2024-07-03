@@ -1,12 +1,16 @@
-import p1_img from "./product_1.png";
-import p2_img from "./product_2.png";
-import p3_img from "./product_3.png";
-import p4_img from "./product_4.png";
+import p1_img from "/Women/ANNIE-L-BLK-RANI-1.jpg";
+import p2_img from "/Women/ANNIE-GRY-BLK_2.jpg";
+import p3_img from "/Women/ANNIE-PRPL-SIL_2.jpg";
+import p4_img from "/Women/BEACH_22L-905_OFFWHT-S.GRN_2.jpg";
+import p5_img from "/Women/CAMP-LEX_22L-887_NAVY-R.SLATE_2_d7144794-aa13-47dc-8e3d-c50c82fb0130.jpg";
+import p6_img from "/Women/BLISS_22G-796_MAUVE-B.PINK_3.webp";
+import p7_img from "/Women/BLISS-11G-796-L.GRY-PEACH_2.jpg";
+import p8_img from "/Women/BROWNIE_22L-101_OFFWHT-MSTD_2_1de51212-651b-46a0-b018-b5417bc715d9.jpg";
 
 let data_product = [
   {
     id: 1,
-    name: "NIKE Running Shoes , Red , White Sole",
+    name: "NIKE Running Shoes",
     category: "Men",
     image: p1_img,
     new_price: 26.23,
@@ -14,7 +18,7 @@ let data_product = [
   },
   {
     id: 2,
-    name: "NIKE Running Shoes AIR MAX , All Black",
+    name: "NIKE Running Shoes AIR MAX ",
     category: "Men",
     image: "image2.jpg",
     image: p2_img,
@@ -23,54 +27,52 @@ let data_product = [
   },
   {
     id: 3,
-    name: "NIKE AIR Running Shoes , Blue , White Sole",
+    name: "NIKE AIR Running Shoes ",
     category: "Men",
     image: p3_img,
     new_price: 24.91,
     old_price: 28.05,
   },
-  // {
-  //   id: 4,
-  //   name: "Item 4",
-  //   category: "Men",
-  //   image:
-  //     "https://t3.ftcdn.net/jpg/06/12/00/18/360_F_612001823_TkzT0xmIgagoDCyQ0yuJYEGu8j6VNVYT.jpg",
-  //   new_price: 25.88,
-  //   old_price: 27.05,
-  // },
-  // {
-  //   id: 5,
-  //   name: "Item 5",
-  //   category: "Men",
-  //   image:
-  //     "https://rukminim2.flixcart.com/image/450/500/xif0q/shoe/7/z/r/8-white-leaf-8-urbanbox-white-black-original-imagvgf4cuzs2hrw.jpeg?q=90&crop=true",
-  //   new_price: 29.18,
-  //   old_price: 29.64,
-  // },
-  // {
-  //   id: 6,
-  //   name: "Item 6",
-  //   category: "Men",
-  //   image: "image6.jpg",
-  //   new_price: 21.91,
-  //   old_price: 26.45,
-  // },
-  // {
-  //   id: 7,
-  //   name: "Item 7",
-  //   category: "Men",
-  //   image: "image7.jpg",
-  //   new_price: 18.4,
-  //   old_price: 27.61,
-  // },
-  // {
-  //   id: 8,
-  //   name: "Item 8",
-  //   category: "Men",
-  //   image: "image8.jpg",
-  //   new_price: 19.08,
-  //   old_price: 19.53,
-  // },
+  {
+    id: 4,
+    name: "Item 4",
+    category: "Men",
+    image: p4_img,
+    new_price: 25.88,
+    old_price: 27.05,
+  },
+  {
+    id: 5,
+    name: "Item 5",
+    category: "Men",
+    image: p5_img,
+    new_price: 29.18,
+    old_price: 29.64,
+  },
+  {
+    id: 6,
+    name: "Item 6",
+    category: "Men",
+    image: p6_img,
+    new_price: 21.91,
+    old_price: 26.45,
+  },
+  {
+    id: 7,
+    name: "Item 7",
+    category: "Men",
+    image: p7_img,
+    new_price: 18.4,
+    old_price: 27.61,
+  },
+  {
+    id: 8,
+    name: "Item 8",
+    category: "Men",
+    image: p8_img,
+    new_price: 19.08,
+    old_price: 19.53,
+  },
   // {
   //   id: 9,
   //   name: "Item 9",

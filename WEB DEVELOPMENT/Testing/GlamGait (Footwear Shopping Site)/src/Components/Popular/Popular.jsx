@@ -1,13 +1,12 @@
 import React from "react";
-import "./Popular.css";
 import data_product from "../assets/data";
 import Item from "../Item/Item";
 
 const Popular = () => {
   return (
-    <div className="popular">
-      <h1>TRENDING FOOTWEAR</h1>
-      <div className="popular_item">
+    <div className="flex flex-col items-center bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-50 mt-4 min-h-screen">
+      <h1 className="text-center text-4xl font-bold pt-4">TRENDING FOOTWEAR</h1>
+      <div className="flex flex-nowrap overflow-x-auto scrollbar-hide w-full px-4 mt-8">
         {data_product.map((item, i) => (
           <Item
             key={i}
@@ -19,8 +18,8 @@ const Popular = () => {
           />
         ))}
       </div>
-      <div className="popular_button">
-        <button>Explore More &#8594; </button>
+      <div className="text-center bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-md shadow-md mt-4">
+        <button className="text-lg font-medium">Explore More &#8594;</button>
       </div>
     </div>
   );
