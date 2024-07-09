@@ -12,6 +12,11 @@ const Cart = () => {
     getTotalCartAmount,
   } = useContext(ShopContext);
 
+  const totalItems = Object.values(cartItems).reduce(
+    (acc, curr) => acc + curr,
+    0
+  );
+
   return (
     <div>
       <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
@@ -158,6 +163,27 @@ const Cart = () => {
                   }
                   return null;
                 })}
+                {totalItems === 0 && (
+                  <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
+                    <p className="text-xl font-semibold text-gray-900 dark:text-white text-center">
+                      Your Cart is Empty
+                    </p>
+                    <div className="space-y-4 p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png"
+                        alt="Empty Cart"
+                        className="mx-auto w-32 h-32"
+                      />
+                      <div className="flex justify-center">
+                        <Link to="/">
+                          <button className="mt-4 px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                            Return to Shop
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
