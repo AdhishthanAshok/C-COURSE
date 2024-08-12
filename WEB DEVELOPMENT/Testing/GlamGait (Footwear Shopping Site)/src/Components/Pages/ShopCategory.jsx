@@ -54,7 +54,7 @@ const ShopCategory = ({ category }) => {
             className={`text-lg font-medium py-2 px-6 rounded-md shadow-md ${
               visible < products.length
                 ? "bg-blue-500 hover:bg-blue-600 text-white"
-                : "bg-gray-500 text-gray-300 cursor-not-allowed"
+                : "bg-gray-800 text-gray-300 cursor-not-allowed"
             }`}
             onClick={loadMore}
             disabled={visible >= products.length}

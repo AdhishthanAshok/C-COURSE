@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../Context/ShopContext";
 import { Link } from "react-router-dom";
+import emptyCart from "../assets/emptyCart.png";
 
 const Cart = () => {
   const {
@@ -16,6 +17,14 @@ const Cart = () => {
     (acc, curr) => acc + curr,
     0
   );
+  const totalCartAmount = getTotalCartAmount();
+  const savings = (totalCartAmount * 0.1).toFixed(2);
+  const tax = (totalCartAmount * 0.06).toFixed(2);
+  const finalTotal = (
+    totalCartAmount -
+    parseFloat(savings) +
+    parseFloat(tax)
+  ).toFixed(2);
 
   return (
     <div>
@@ -117,7 +126,7 @@ const Cart = () => {
                             </div>
                             <div className="text-end md:order-4 md:w-32">
                               <p className="text-base font-bold text-gray-900 dark:text-white">
-                                ${product.new_price * cartItems[product.id]}
+                                ₹{product.new_price * cartItems[product.id]}
                               </p>
                             </div>
                           </div>
@@ -170,7 +179,7 @@ const Cart = () => {
                     </p>
                     <div className="space-y-4 p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
                       <img
-                        src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png"
+                        src={emptyCart}
                         alt="Empty Cart"
                         className="mx-auto w-32 h-32"
                       />
@@ -199,34 +208,25 @@ const Cart = () => {
                         Original price
                       </dt>
                       <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        ${getTotalCartAmount()};
+                        ₹{totalCartAmount}
                       </dd>
                     </dl>
 
                     <dl className="flex items-center justify-between gap-4">
                       <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                        Savings
+                        Savings <span className="text-green-500 ">(10%)</span>
                       </dt>
                       <dd className="text-base font-medium text-green-600">
-                        0
+                        ₹{savings}
                       </dd>
                     </dl>
 
                     <dl className="flex items-center justify-between gap-4">
                       <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                        Store Pickup
+                        Tax <span className="text-red-500 ">(6%)</span>
                       </dt>
-                      <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        0
-                      </dd>
-                    </dl>
-
-                    <dl className="flex items-center justify-between gap-4">
-                      <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                        Tax
-                      </dt>
-                      <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        0
+                      <dd className="text-base font-medium text-red-500 dark:text-red-500 ">
+                        ₹{tax}
                       </dd>
                     </dl>
                   </div>
@@ -236,7 +236,7 @@ const Cart = () => {
                       Total
                     </dt>
                     <dd className="text-base font-bold text-gray-900 dark:text-white">
-                      ${getTotalCartAmount()};
+                      ₹{finalTotal}
                     </dd>
                   </dl>
                 </div>
@@ -255,7 +255,7 @@ const Cart = () => {
                   </span>
                   <Link
                     to="/"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 hover:underline dark:text-gray-300"
                   >
                     Continue Shopping
                     <svg

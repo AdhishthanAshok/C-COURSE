@@ -1,9 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import logo_img from "./assets/logo.png";
+import logo_img_dark from "./assets/logo_dark.jpg";
+import logo_img_light from "./assets/logo_light.png";
 import profile_img from "./assets/profile_icon.png";
 import Theme from "./Theme.jsx";
 import CartButton from "./Pages/CartButton.jsx";
@@ -21,6 +22,17 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [menu, setMenu] = useState("Shop");
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 h-1/5">
@@ -47,7 +59,7 @@ export default function Navbar() {
                       <Link to="/">
                         <img
                           className="h-10 w-auto"
-                          src={logo_img}
+                          src={darkMode ? logo_img_dark : logo_img_light}
                           alt="Your Company"
                         />
                       </Link>
@@ -80,7 +92,6 @@ export default function Navbar() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="" />
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
@@ -97,45 +108,54 @@ export default function Navbar() {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute dark:bg-gray-900 mt-2 w-44 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to="/profile"
-                              className={classNames(
-                                active ? "bg-gray-200 dark:bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                        {isLoggedIn ? (
+                          <>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <Link
+                                  to="/profile"
+                                  className={classNames(
+                                    active
+                                      ? "bg-gray-200 dark:bg-gray-700"
+                                      : "",
+                                    "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                                  )}
+                                >
+                                  Your Profile
+                                </Link>
                               )}
-                            >
-                              Your Profile
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to="/settings"
-                              className={classNames(
-                                active ? "bg-gray-200 dark:bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                            </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <Link
+                                  to="/logout"
+                                  className={classNames(
+                                    active
+                                      ? "bg-gray-200 dark:bg-gray-700"
+                                      : "",
+                                    "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                                  )}
+                                >
+                                  Sign out
+                                </Link>
                               )}
-                            >
-                              Settings
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to="/logout"
-                              className={classNames(
-                                active ? "bg-gray-200 dark:bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
-                              )}
-                            >
-                              Sign out
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </Menu.Item>
+                          </>
+                        ) : (
+                          <Menu.Item>
+                            {({ active }) => (
+                              <Link
+                                to="/login"
+                                className={classNames(
+                                  active ? "bg-gray-200 dark:bg-gray-700" : "",
+                                  "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                                )}
+                              >
+                                Login
+                              </Link>
+                            )}
+                          </Menu.Item>
+                        )}
                       </Menu.Items>
                     </Transition>
                   </Menu>
