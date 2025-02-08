@@ -1,7 +1,7 @@
 public class VerySimpleRecursionExample {
 
     public static void main(String[] args) {
-      callMyself(9);
+      callMyself(8);
     }
     /* The recursive Java method */
     public static void callMyself(long i) {
