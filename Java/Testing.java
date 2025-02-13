@@ -1,4 +1,4 @@
-public class VerySimpleRecursionExample {
+public class Testing {
 
     public static void main(String[] args) {
       callMyself(8);
